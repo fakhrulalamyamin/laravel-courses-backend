@@ -20,4 +20,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('/courses', [CourseController::class, 'index']);
+Route::get('/course/{slug}', [CourseController::class, 'single']);
 Route::get('/all-courses', [CourseController::class, 'allCourses']);

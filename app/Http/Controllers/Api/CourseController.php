@@ -56,4 +56,11 @@ class CourseController extends Controller
             'series' => $series
         ]);
     }
+
+    public function single($slug)
+    {
+        $course = Course::where('slug', $slug)->first();
+
+        return response()->json($course);
+    }
 }
